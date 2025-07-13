@@ -19,3 +19,21 @@ El objetivo es entender los patrones de uso y mejorar la gestión de recursos en
 - **Variables cíclicas (seno y coseno de mes/día):** Representan la naturaleza periódica del uso de la biblioteca (por ejemplo, variaciones según el día de la semana o el mes). Esto permite que el modelo aprenda mejor los ciclos temporales y estacionales presentes en los datos.
 
 Estas variables enriquecen el conjunto de características y mejoran la capacidad predictiva de los modelos al capturar tanto tendencias como estacionalidades y patrones temporales.
+## Archivos Alternativos
+
+Los archivos `XGBoostAlternativo.ipynb` y `RandomForestAlternativo.ipynb` son **versiones alternativas simplificadas** del modelo original.  
+A diferencia del modelo principal (`LibraryUseXGB.ipynb` y `LibraryUseRF.ipynb`), **no incluyen variables de medias móviles, lags ni medias móviles exponenciales (ewm)** en la ingeniería de características.
+
+Estas versiones permiten comparar el desempeño del modelo utilizando únicamente las variables originales y algunas transformaciones básicas, sin incorporar información histórica agregada.  
+Esto es útil para analizar el impacto real de las variables de series temporales en la predicción.
+
+## ¿Cómo utilizar el modelo ya entrenado?
+
+Los modelos **XGBoost** y **RandomForest** ya han sido entrenados y guardados en la carpeta `Archivos Auxiliares` como `modelo_XGBoost.pkl` y `modelo_RandomForest.pkl`.  
+Al ejecutar el código principal, estos modelos se cargarán automáticamente si los archivos existen, por lo que no es necesario volver a entrenarlos cada vez.
+
+### ¿Cómo entrenar un nuevo modelo?
+
+Si deseas entrenar un modelo desde cero con nuevos datos o parámetros:
+- **Elimina el archivo correspondiente** (`modelo_XGBoost.pkl` o `modelo_RandomForest.pkl`) de la carpeta `Archivos Auxiliares`.
+- **Ejecuta el código**. El script detectará que no existe el modelo y realizará el entrenamiento automáticamente, guardando el nuevo modelo en la misma carpeta.
