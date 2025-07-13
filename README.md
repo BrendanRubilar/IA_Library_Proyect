@@ -8,4 +8,4 @@ Este proyecto utiliza técnicas de aprendizaje automático para predecir el núm
 - **Evaluación:** Se utilizan métricas como MSE, MAE y SMAPE, además de visualizaciones de resultados y análisis de importancia de variables.
 - **Datos:** Los datasets utilizados están en la carpeta [`Datasets/`](Datasets), incluyendo accesos diarios y días de vacaciones.
 
-El objetivo es entender los patrones de uso y mejorar la gestión de recursos en la biblioteca mediante
+El objetivo es entender los patrones de uso y mejorar la gestión de recursos en la biblioteca mediante modelos predictivos robustos.
