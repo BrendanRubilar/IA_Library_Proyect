@@ -9,3 +9,13 @@ Este proyecto utiliza técnicas de aprendizaje automático para predecir el núm
 - **Datos:** Los datasets utilizados están en la carpeta [`Datasets/`](Datasets), incluyendo accesos diarios y días de vacaciones.
 
 El objetivo es entender los patrones de uso y mejorar la gestión de recursos en la biblioteca mediante modelos predictivos robustos.
+
+### ¿Por qué se usan medias móviles, EWMA y variables cíclicas?
+
+- **Medias móviles:** Permiten suavizar las fluctuaciones diarias y capturar tendencias a corto, mediano y largo plazo en los accesos. Ayudan al modelo a identificar patrones recurrentes y anomalías en el comportamiento de los usuarios.
+
+- **EWMA (Media móvil exponencial):** Da mayor peso a los datos más recientes, lo que es útil para detectar cambios rápidos en la tendencia de accesos y mejorar la capacidad de reacción del modelo ante eventos recientes.
+
+- **Variables cíclicas (seno y coseno de mes/día):** Representan la naturaleza periódica del uso de la biblioteca (por ejemplo, variaciones según el día de la semana o el mes). Esto permite que el modelo aprenda mejor los ciclos temporales y estacionales presentes en los datos.
+
+Estas variables enriquecen el conjunto de características y mejoran la capacidad predictiva de los modelos al capturar tanto tendencias como estacionalidades y patrones temporales.
